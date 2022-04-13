@@ -85,7 +85,7 @@ app.post("/api/fixes", (request, response) => {
   const fix = new Fix({
     name: body.name,
     car_id: body.car_id,
-    date: new Date(),
+    created_at: new Date(),
   });
 
   fix.save().then((savedFix) => {
